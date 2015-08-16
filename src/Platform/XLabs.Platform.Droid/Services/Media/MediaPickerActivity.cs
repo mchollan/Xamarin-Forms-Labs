@@ -487,7 +487,7 @@ namespace XLabs.Platform.Services.Media
 						nomedia.CreateNewFile();
 				}
 
-				return Uri.FromFile(new Java.IO.File(MediaFileHelpers.GetUniqueMediaFileWithPath(isPhoto, mediaStorageDir.Path, name, File.Exists)));
+				return Uri.FromFile(new Java.IO.File(MediaFileHelpers.GetUniqueMediaFileWithPath(isPhoto, mediaStorageDir.Path, Path.GetFileNameWithoutExtension(name), File.Exists)));
 			}
 		}
 
